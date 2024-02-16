@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Flash",
+      "type": "shell",
+      "command": "openocd",
+      "args": [
+        "-f",
+        "interface/jlink.cfg",
+        "-f",
+        "target/rp2040.cfg",
+        "-c",
+        "adapter speed 5000; program C:/Users/admin/Documents/rp2040/max7219/build/main/max7219.elf verify reset exit"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
